@@ -1,0 +1,16 @@
+
+@font-face {
+  font-family: 'spartan';
+  src: url('../assets/fonts/spartan.otf') format('opentype');
+}
+
+.app-title {
+  cursor: pointer;
+  font-family: spartan;
+  font-size: 25px;
+  display: flex;
+
+  .mat-icon {
+    margin: 5px;
+  }
+}

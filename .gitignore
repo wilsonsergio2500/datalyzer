@@ -3,3 +3,12 @@
 ################################################################################
 
 /DataLyzer.API/bin/Debug/net5.0
+/DataLyzer.API/obj
+/DataLyzer.DAL/bin/Debug/net5.0
+/DataLyzer.DAL/obj
+/DataLyzer.JwtToken/bin/Debug/net5.0
+/DataLyzer.JwtToken/obj
+/DataLyzer.Models/bin/Debug/net5.0
+/DataLyzer.Models/obj
+/.vs/DataLyzer
+/DataLyzer.Ng/package-lock.json

@@ -1,0 +1,81 @@
+<mat-sidenav-container fullscreen>
+
+  <mat-sidenav #start [opened]="mobileQuery.matches ? false : true" [mode]="mobileQuery.matches ? 'over' : 'side'">
+
+
+      <mat-accordion>
+
+        <mat-expansion-panel expanded="true" class="noshadow">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Action Items
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <mat-list>
+            <mat-list-item class="menu-list-item">
+              <a matLine routerLink="/main">
+                <span>Dashboard</span>
+              </a>
+            </mat-list-item>
+            <mat-list-item class="menu-list-item">
+              <mat-icon color="primary" mat-list-icon>format_list_numbered</mat-icon>
+              <a matLine routerLink="/main/dataset">
+                <span>Datasets</span>
+              </a>
+            </mat-list-item>
+            <mat-list-item class="menu-list-item">
+              <mat-icon color="primary" mat-list-icon>assignment</mat-icon>
+              <a matLine routerLink="/main/report">
+                <span>Reports</span>
+              </a>
+            </mat-list-item>
+
+          </mat-list>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+
+
+  </mat-sidenav>
+
+  <mat-sidenav-content class="side-content" fxLayout="column">
+
+    <mat-toolbar color="primary" fxflex="100">
+
+      <mat-toolbar-row>
+
+        <button mat-icon-button (click)="start.open('mouse')" *ngIf="mobileQuery.matches ? true : false">
+          <mat-icon aria-label="menu icon-button with a heart icon">menu</mat-icon>
+        </button>
+
+        <span class="app-title" routerLink="/">
+        DataLyzer
+          <mat-icon>insert_chart</mat-icon>
+        </span>
+        <span class="fill-space"></span>
+
+        <button mat-icon-button mat-raised-button [matMenuTriggerFor]="usermenu">
+          <mat-icon aria-label="profile">person</mat-icon>
+        </button>
+
+        <mat-menu #usermenu="matMenu" color="primary">
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+       
+
+      </mat-toolbar-row>
+
+    </mat-toolbar>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

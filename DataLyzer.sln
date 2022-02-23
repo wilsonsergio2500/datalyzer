@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLyzer.API", "DataLyzer.API\DataLyzer.API.csproj", "{0010E19A-6C0E-4A54-B15D-041BE297EB22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{5C31BC45-587A-47A1-9B2D-50848FB2A2B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLyzer.Models", "DataLyzer.Models\DataLyzer.Models.csproj", "{A9875353-81A4-4433-AE11-B34FA850A601}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLyzer.JwtToken", "DataLyzer.JwtToken\DataLyzer.JwtToken.csproj", "{22A30077-48D7-4DDF-84C4-DA7417415DD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLyzer.DAL", "DataLyzer.DAL\DataLyzer.DAL.csproj", "{8F9C354C-73EB-4D07-92AA-1B667CB14F7D}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "DataLyzer.Ng", "DataLyzer.Ng\DataLyzer.Ng.njsproj", "{F73614AC-3DAB-4B27-B4AE-E1C415DB711B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0010E19A-6C0E-4A54-B15D-041BE297EB22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0010E19A-6C0E-4A54-B15D-041BE297EB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0010E19A-6C0E-4A54-B15D-041BE297EB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0010E19A-6C0E-4A54-B15D-041BE297EB22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9875353-81A4-4433-AE11-B34FA850A601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9875353-81A4-4433-AE11-B34FA850A601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9875353-81A4-4433-AE11-B34FA850A601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9875353-81A4-4433-AE11-B34FA850A601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A30077-48D7-4DDF-84C4-DA7417415DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A30077-48D7-4DDF-84C4-DA7417415DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A30077-48D7-4DDF-84C4-DA7417415DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A30077-48D7-4DDF-84C4-DA7417415DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F9C354C-73EB-4D07-92AA-1B667CB14F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F9C354C-73EB-4D07-92AA-1B667CB14F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F9C354C-73EB-4D07-92AA-1B667CB14F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F9C354C-73EB-4D07-92AA-1B667CB14F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F73614AC-3DAB-4B27-B4AE-E1C415DB711B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F73614AC-3DAB-4B27-B4AE-E1C415DB711B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F73614AC-3DAB-4B27-B4AE-E1C415DB711B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F73614AC-3DAB-4B27-B4AE-E1C415DB711B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A9875353-81A4-4433-AE11-B34FA850A601} = {5C31BC45-587A-47A1-9B2D-50848FB2A2B3}
+		{22A30077-48D7-4DDF-84C4-DA7417415DD7} = {5C31BC45-587A-47A1-9B2D-50848FB2A2B3}
+		{8F9C354C-73EB-4D07-92AA-1B667CB14F7D} = {5C31BC45-587A-47A1-9B2D-50848FB2A2B3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B2C964F-79E2-46F7-8749-307FFA0E2C31}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,67 @@
+<div fxLayout="column" fxFlex>
+
+    <div fxLayout="column" fxLayoutAlign="start center" [ngStyle]="{'padding-top.px': 30}" *ngIf="working$ | async as loading; else done">
+      <mat-progress-spinner mode="indeterminate" [diameter]="30" [strokeWidth]="2"></mat-progress-spinner>
+      <span [ngStyle]="{'padding.px': 10}">Loading Reports...</span>
+    </div>
+  
+    <ng-template #done>
+
+      <h1>Reports</h1>
+
+      <div class="report-subheading">
+        <mat-card class="report-subheading-card">
+          <div>
+            Numerous COVID-19 datasets available for public use.
+            Datasets feature case surveillance, deaths, populations, sex, race, and age. Search by the tag "COVID-19" to see all datasets. New Reports could be included under datasets
+          </div>
+          <div class="report-subheading-card-action">
+            <a mat-button color="primary" routerLink="/main/dataset">View DataSets</a>
+          </div>
+       
+        </mat-card>
+      </div>
+      
+
+      <ng-container *ngIf="items$ | async as items">
+
+        <ng-container *ngIf="!items.length">
+          <mat-card>
+            No Reports Found
+          </mat-card>
+        </ng-container>
+
+        <ng-container *ngIf="items.length">
+
+          <mat-table [dataSource]="items">
+
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+              <mat-cell *matCellDef="let row" data-label="Name">
+                <span class="mobile-label"> Name </span>
+                <span class="value">{{row['reportName']}}</span>
+              </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+              <mat-header-cell *matHeaderCellDef></mat-header-cell>
+              <mat-cell *matCellDef="let row" data-label="view">
+                <a mat-button color="primary" routerLink="./view/{{row['id']}}">Detail</a>
+                <button mat-button color="warn" (click)="onRemove(row['id'])">Remove</button>
+              </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="['name', 'action']"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: ['name', 'action']"></mat-row>
+
+          </mat-table>
+
+        </ng-container>
+
+      </ng-container>
+
+    </ng-template>
+  
+  
+  
+  </div>

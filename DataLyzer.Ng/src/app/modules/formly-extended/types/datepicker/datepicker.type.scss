@@ -1,0 +1,9 @@
+mat-datepicker-toggle {
+  display: inline-flex;
+  position:absolute;
+  top: -5px;
+  right:5px;
+}
+::ng-deep mat-datepicker-toggle .mat-icon-button {
+  border-radius: 0;
+}

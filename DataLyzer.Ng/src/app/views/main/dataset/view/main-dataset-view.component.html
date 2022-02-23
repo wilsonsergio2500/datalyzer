@@ -1,0 +1,123 @@
+<div fxFlex fxLayout="column">
+
+  <div fxLayout="column" fxLayoutAlign="start center" [ngStyle]="{'padding-top.px': 30}" *ngIf="working$ | async as loading; else done">
+    <mat-progress-spinner mode="indeterminate" [diameter]="30" [strokeWidth]="2"></mat-progress-spinner>
+    <span [ngStyle]="{'padding.px': 10}">Loading Dataset Record...</span>
+  </div>
+
+  <ng-template #done>
+
+    <div class="navigate-heading">
+      <div [ngStyle]="{'margin-top.px': 15}">
+        <button mat-mini-fab color="primary" aria-label="Dataset List" [routerLink]="listPath">
+          <mat-icon>chevron_left</mat-icon>
+        </button>
+      </div>
+      <h2>{{title}}</h2>
+    </div>
+
+    <ng-container *ngIf="current$ | async as dataset">
+
+      <mat-card>
+        <div class="responsive-list">
+
+          <div class="responsive-list-item">
+            <div class="responsive-list-item-label">
+              Name
+            </div>
+            <div class="responsive-list-item-value">
+              {{dataset.name}}
+            </div>
+          </div>
+
+          <div class="responsive-list-item">
+            <div class="responsive-list-item-label">
+              Geography
+            </div>
+            <div class="responsive-list-item-value">
+              {{dataset.geographicCoverage}}
+            </div>
+          </div>
+
+          <div class="responsive-list-item">
+            <div class="responsive-list-item-label">
+              Created
+            </div>
+            <div class="responsive-list-item-value">
+              {{dataset.createdDate | date }}
+            </div>
+          </div>
+
+          <ng-container *ngIf="dataset.hasbeenFetch">
+
+            <div class="responsive-list-item">
+              <div class="responsive-list-item-label">
+                Retrieved Date
+              </div>
+              <div class="responsive-list-item-value">
+                {{dataset.update | date }}
+              </div>
+            </div>
+
+            <div class="responsive-list-item">
+              <div class="responsive-list-item-label">
+                Data Retrieved
+              </div>
+              <div class="responsive-list-item-value">
+                <mat-icon color="primary">check_circle</mat-icon>
+              </div>
+            </div>
+
+          </ng-container>
+
+          <ng-container *ngIf="!dataset.hasbeenFetch">
+
+            <div class="responsive-list-item">
+              <div class="responsive-list-item-label">
+                Data Retrieved
+              </div>
+              <div class="responsive-list-item-value">
+                <mat-icon color="warn" matTooltip="Dataset has not been Fetch" matTooltipPosition="above">error</mat-icon>
+              </div>
+            </div>
+
+          </ng-container>
+
+
+
+        </div>
+      </mat-card>
+
+      <ng-container *ngIf="dataset.hasbeenFetch">
+
+        <div fxLayout="row" fxLayoutAlign="end center">
+          <div [ngStyle]="{'padding.px': 20}">
+            <a mat-raised-button color="primary" routerLink="/main/report/create/{{dataset.id}}">
+              Create Report
+              <mat-icon>article</mat-icon>
+            </a>
+          </div>
+        </div>
+
+      </ng-container>
+
+      <ng-container *ngIf="!dataset.hasbeenFetch">
+
+        <div fxLayout="row" fxLayoutAlign="end center">
+          <div [ngStyle]="{'padding.px': 20}">
+            <button mat-raised-button color="primary" (click)="retrieveApiData(dataset.id)" type="button" >
+              <mat-icon>power</mat-icon>
+                Retrieve Api Data
+            </button>
+          </div>
+        </div>
+
+      </ng-container>
+
+
+    </ng-container>
+
+
+  </ng-template>
+
+</div>

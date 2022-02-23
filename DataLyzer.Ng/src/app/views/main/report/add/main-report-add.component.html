@@ -1,0 +1,25 @@
+<div fxLayout="column" fxFlex>
+
+    <div fxLayout="column" fxLayoutAlign="start center" [ngStyle]="{'padding-top.px': 30}" *ngIf="working$ | async as loading; else done">
+      <mat-progress-spinner mode="indeterminate" [diameter]="30" [strokeWidth]="2"></mat-progress-spinner>
+      <span [ngStyle]="{'padding.px': 10}">Loading Fields...</span>
+    </div>
+  
+    <ng-template #done>
+
+      <ng-container *ngIf="current$ | async as dataset">
+
+        <h1>{{dataset.name}}</h1>
+
+        <formly-form-flex-json [formlyGroup]="formlyGroup"
+                               [btn-ready]="btnReadyLabel"
+                               [btn-busy]="btnLoadingLabel"
+                               (onFormSubmit)="formSubmit()">
+        </formly-form-flex-json>
+
+      </ng-container>
+
+    </ng-template>
+  
+  
+  </div>

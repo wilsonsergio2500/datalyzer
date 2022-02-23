@@ -1,0 +1,65 @@
+@import "thememe";
+
+:host {
+  display: flex;
+  height: 100%;
+
+  .user-photo-url-background {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .menu-list-item {
+    a {
+      text-decoration: none;
+      color: #2e2e2e;
+    }
+  }
+}
+
+:host ::ng-deep .menu-list-item .mat-badge-content {
+  font-size: 0.6em;
+  left: 96px;
+  top: 2px;
+}
+
+.toolbar-element {
+  padding: 0 14px;
+}
+
+.content {
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+
+.mat-sidenav {
+  width: 240px;
+  box-shadow: 0 0 4px 2px rgba(0,0,0,.2);
+}
+
+.mat-sidenav .mat-toolbar {
+  width: 240px;
+  position: relative;
+}
+
+.side-content {
+  overflow-y: hidden;
+  display: flex;
+  height: 100%;
+  flex-flow: column;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+.noshadow {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}

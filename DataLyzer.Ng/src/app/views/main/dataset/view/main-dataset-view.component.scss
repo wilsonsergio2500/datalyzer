@@ -1,0 +1,25 @@
+:host {
+
+  .responsive-list {
+    display: flex;
+    flex-direction: column;
+
+    .responsive-list-item {
+      display: flex;
+      border-radius: 0.25rem;
+      padding: .75rem 1.25rem;
+
+      .responsive-list-item-label {
+        width: 20%;
+        font-size: 13px;
+        font-weight:bold;
+      }
+
+      .responsive-list-item-value {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

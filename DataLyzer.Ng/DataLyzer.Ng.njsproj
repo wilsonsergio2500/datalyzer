@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>DataLyzer.Ng</Name>
+    <RootNamespace>DataLyzer.Ng</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f73614ac-3dab-4b27-b4ae-e1c415db711b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="e2e\" />
+    <Folder Include="e2e\src\" />
+    <Folder Include="src\" />
+    <Folder Include="src\app\" />
+    <Folder Include="src\app\components\ux\" />
+    <Folder Include="src\app\components\ux\check-animation\" />
+    <Folder Include="src\app\components\ux\confirmation-dialog\" />
+    <Folder Include="src\app\components\ux\confirmation-dialog\modal\" />
+    <Folder Include="src\app\components\ux\loading-button\" />
+    <Folder Include="src\app\components\ux\loading-button\busy\" />
+    <Folder Include="src\app\components\ux\loading-button\ready\" />
+    <Folder Include="src\app\components\ux\snackbar-status\" />
+    <Folder Include="src\app\components\ux\snackbar-status\service\" />
+    <Folder Include="src\app\components\ux\snackbar-status\types\" />
+    <Folder Include="src\app\components\ux\snackbar-status\types\completed\" />
+    <Folder Include="src\app\components\ux\snackbar-status\types\error\" />
+    <Folder Include="src\app\components\ux\snackbar-status\types\progress\" />
+    <Folder Include="src\app\modules\formly-extended\" />
+    <Folder Include="src\app\modules\formly-extended\core\" />
+    <Folder Include="src\app\modules\formly-extended\formly-form-flex\" />
+    <Folder Include="src\app\modules\formly-extended\formly-form-flex\formly-form-flex-json\" />
+    <Folder Include="src\app\modules\formly-extended\formly-form-flex\formly-form-flex-layout\" />
+    <Folder Include="src\app\modules\formly-extended\types\" />
+    <Folder Include="src\app\modules\formly-extended\types\datepicker\" />
+    <Folder Include="src\app\modules\formly-extended\types\flex-group\" />
+    <Folder Include="src\app\modules\formly-extended\types\number\" />
+    <Folder Include="src\app\modules\formly-extended\types\toggle\" />
+    <Folder Include="src\app\modules\formly-extended\wrappers\" />
+    <Folder Include="src\app\modules\formly-extended\wrappers\prefix\" />
+    <Folder Include="src\app\modules\formly-extended\wrappers\suffix\" />
+    <Folder Include="src\app\modules\material\" />
+    <Folder Include="src\app\modules\shared\" />
+    <Folder Include="src\app\components\" />
+    <Folder Include="src\app\guards\" />
+    <Folder Include="src\app\states\report\" />
+    <Folder Include="src\app\utils\" />
+    <Folder Include="src\app\states\auth\" />
+    <Folder Include="src\app\states\dataset\" />
+    <Folder Include="src\app\views\" />
+    <Folder Include="src\app\views\login\" />
+    <Folder Include="src\app\views\main\" />
+    <Folder Include="src\app\views\main\dashboard\" />
+    <Folder Include="src\app\views\main\dataset\" />
+    <Folder Include="src\app\views\main\dataset\add\" />
+    <Folder Include="src\app\views\main\dataset\list\" />
+    <Folder Include="src\app\views\main\dataset\view\" />
+    <Folder Include="src\app\views\main\report\" />
+    <Folder Include="src\app\views\main\report\add\" />
+    <Folder Include="src\app\views\main\report\list\" />
+    <Folder Include="src\assets\" />
+    <Folder Include="src\assets\fonts\" />
+    <Folder Include="src\environments\" />
+    <Folder Include="src\app\modules\" />
+    <Folder Include="src\app\modules\ng2-ui-auth\" />
+    <Folder Include="src\app\states\" />
+    <Folder Include="src\stylings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".browserslistrc" />
+    <Content Include=".editorconfig" />
+    <Content Include=".gitignore" />
+    <Content Include="angular.json" />
+    <Content Include="e2e\protractor.conf.js" />
+    <Content Include="e2e\tsconfig.json" />
+    <Content Include="karma.conf.js" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\app.component.scss" />
+    <Content Include="src\app\components\ux\check-animation\check-animation.component.html" />
+    <Content Include="src\app\components\ux\confirmation-dialog\modal\confirmation-modal.component.html" />
+    <Content Include="src\app\components\ux\confirmation-dialog\modal\confirmation-modal.component.scss" />
+    <Content Include="src\app\components\ux\loading-button\busy\busy.component.html" />
+    <Content Include="src\app\components\ux\loading-button\busy\busy.component.scss" />
+    <Content Include="src\app\components\ux\loading-button\loading-button.component.html" />
+    <Content Include="src\app\components\ux\loading-button\ready\ready.component.html" />
+    <Content Include="src\app\components\ux\loading-button\ready\ready.component.scss" />
+    <Content Include="src\app\components\ux\snackbar-status\types\completed\snackbar-completed.component.html" />
+    <Content Include="src\app\components\ux\snackbar-status\types\error\snackbar-error.component.html" />
+    <Content Include="src\app\components\ux\snackbar-status\types\progress\snackbar-progress.component.html" />
+    <Content Include="src\app\modules\formly-extended\formly-form-flex\formly-form-flex-json\formly-form-flex-json.component.html" />
+    <Content Include="src\app\modules\formly-extended\formly-form-flex\formly-form-flex-json\formly-form-flex-json.component.scss" />
+    <Content Include="src\app\modules\formly-extended\types\datepicker\datapicker.type.html" />
+    <Content Include="src\app\modules\formly-extended\types\datepicker\datepicker.type.scss" />
+    <Content Include="src\app\modules\formly-extended\types\number\number.component.html" />
+    <Content Include="src\app\modules\formly-extended\wrappers\prefix\prefix-icon.component.html" />
+    <Content Include="src\app\modules\formly-extended\wrappers\suffix\suffix-icon.component.html" />
+    <Content Include="src\app\views\login\login.component.html" />
+    <Content Include="src\app\views\login\login.component.scss" />
+    <Content Include="src\app\views\main\dashboard\dashboard.component.html" />
+    <Content Include="src\app\views\main\dashboard\dashboard.component.scss" />
+    <Content Include="src\app\views\main\dataset\add\main-dataset-add.component.html" />
+    <Content Include="src\app\views\main\dataset\add\main-dataset-add.component.scss" />
+    <Content Include="src\app\views\main\dataset\list\main-dataset-list.component.html" />
+    <Content Include="src\app\views\main\dataset\list\main-dataset-list.component.scss" />
+    <Content Include="src\app\views\main\dataset\main-dataset.component.html" />
+    <Content Include="src\app\views\main\dataset\main-dataset.component.scss" />
+    <Content Include="src\app\views\main\dataset\view\main-dataset-view.component.html" />
+    <Content Include="src\app\views\main\dataset\view\main-dataset-view.component.scss" />
+    <Content Include="src\app\views\main\main.component.html" />
+    <Content Include="src\app\views\main\main.component.scss" />
+    <Content Include="src\app\views\main\report\add\main-report-add.component.html" />
+    <Content Include="src\app\views\main\report\add\main-report-add.component.scss" />
+    <Content Include="src\app\views\main\report\list\main-report-list.component.html" />
+    <Content Include="src\app\views\main\report\list\main-report-list.component.scss" />
+    <Content Include="src\app\views\main\report\main-report.component.html" />
+    <Content Include="src\app\views\main\report\main-report.component.scss" />
+    <Content Include="src\assets\.gitkeep" />
+    <Content Include="src\assets\fonts\spartan.otf" />
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\index.html" />
+    <Content Include="src\styles.scss" />
+    <Content Include="src\stylings\mixins.scss" />
+    <Content Include="src\stylings\thememe.scss" />
+    <Content Include="src\stylings\variables.scss" />
+    <Content Include="tsconfig.app.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tsconfig.spec.json" />
+    <Content Include="tslint.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="e2e\src\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="e2e\src\app.po.ts" />
+    <TypeScriptCompile Include="src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\components\customComponents.module.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\check-animation\check-animation.component.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\confirmation-dialog\confirmation-dialog.service.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\confirmation-dialog\elements.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\confirmation-dialog\modal\confirmation-modal.component.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\elements.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\loading-button\busy\busy.component.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\loading-button\elements.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\loading-button\loading-button.component.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\loading-button\ready\ready.component.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\snackbar-status\elements.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\snackbar-status\service\snackbar-status.service.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\snackbar-status\snackbar-status-base.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\snackbar-status\styles.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\snackbar-status\types\completed\snackbar-completed.component.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\snackbar-status\types\error\snackbar-error.component.ts" />
+    <TypeScriptCompile Include="src\app\components\ux\snackbar-status\types\progress\snackbar-progress.component.ts" />
+    <TypeScriptCompile Include="src\app\guards\authenticated.guard.ts" />
+    <TypeScriptCompile Include="src\app\guards\guards.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\core\fields-types-schemas.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\core\FormlyTypeGroup.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\core\IFormlyTypeGroup.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\formly-form-flex\formly-form-flex-json\fomly-form-flex-json.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\formly-form-flex\formly-form-flex-layout\formly-form-flex-layout.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\formly-form-flex\formly-form-flex.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\ngx-formly-fields-extended.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\types\datepicker\datepicker.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\types\datepicker\datepicker.type.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\types\flex-group\flex-group.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\types\flex-group\flex-group.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\types\number\number.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\types\number\number.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\types\toggle\toggle.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\types\toggle\toggle.type.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\wrappers\prefix\prefix-icon.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\wrappers\prefix\prefix-icon.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\wrappers\suffix\suffix-icon.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\formly-extended\wrappers\suffix\suffix-icon.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\material\material.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\shared\shared.module.ts" />
+    <TypeScriptCompile Include="src\app\states\auth\auth.actions.ts" />
+    <TypeScriptCompile Include="src\app\states\auth\auth.model.ts" />
+    <TypeScriptCompile Include="src\app\states\auth\auth.state.ts" />
+    <TypeScriptCompile Include="src\app\states\dataset\dataset.actions.ts" />
+    <TypeScriptCompile Include="src\app\states\dataset\dataset.model.ts" />
+    <TypeScriptCompile Include="src\app\states\dataset\dataset.state.ts" />
+    <TypeScriptCompile Include="src\app\states\report\report.actions.ts" />
+    <TypeScriptCompile Include="src\app\states\report\report.model.ts" />
+    <TypeScriptCompile Include="src\app\states\report\report.state.ts" />
+    <TypeScriptCompile Include="src\app\states\states.ts" />
+    <TypeScriptCompile Include="src\app\utils\loggerUtil.ts" />
+    <TypeScriptCompile Include="src\app\utils\payloadFieldUtil.ts" />
+    <TypeScriptCompile Include="src\app\views\elements.ts" />
+    <TypeScriptCompile Include="src\app\views\login\login.component.ts" />
+    <TypeScriptCompile Include="src\app\views\login\login.form.ts" />
+    <TypeScriptCompile Include="src\app\views\main\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="src\app\views\main\dataset\add\main-dataset-add.component.ts" />
+    <TypeScriptCompile Include="src\app\views\main\dataset\element.ts" />
+    <TypeScriptCompile Include="src\app\views\main\dataset\list\main-dataset-list.component.ts" />
+    <TypeScriptCompile Include="src\app\views\main\dataset\list\main-dataset-list.resolver.ts" />
+    <TypeScriptCompile Include="src\app\views\main\dataset\main-dataset.component.ts" />
+    <TypeScriptCompile Include="src\app\views\main\dataset\main-dataset.module.ts" />
+    <TypeScriptCompile Include="src\app\views\main\dataset\main-dataset.routing.module.ts" />
+    <TypeScriptCompile Include="src\app\views\main\dataset\view\main-dataset-view.component.ts" />
+    <TypeScriptCompile Include="src\app\views\main\dataset\view\main-dataset-view.resolver.ts" />
+    <TypeScriptCompile Include="src\app\views\main\element.ts" />
+    <TypeScriptCompile Include="src\app\views\main\main.component.ts" />
+    <TypeScriptCompile Include="src\app\views\main\main.module.ts" />
+    <TypeScriptCompile Include="src\app\views\main\main.routing.module.ts" />
+    <TypeScriptCompile Include="src\app\views\main\report\add\main-report-add.component.ts" />
+    <TypeScriptCompile Include="src\app\views\main\report\add\main-report-add.resolver.ts" />
+    <TypeScriptCompile Include="src\app\views\main\report\elements.ts" />
+    <TypeScriptCompile Include="src\app\views\main\report\list\main-report-list.component.ts" />
+    <TypeScriptCompile Include="src\app\views\main\report\list\main-report-list.resolver.ts" />
+    <TypeScriptCompile Include="src\app\views\main\report\main-report.component.ts" />
+    <TypeScriptCompile Include="src\app\views\main\report\main-report.module.ts" />
+    <TypeScriptCompile Include="src\app\views\main\report\main-report.routing.module.ts" />
+    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="src\environments\environment.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\auth.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\config.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\interceptor.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\local.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\ng2-ui-auth.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\oauth-service.interface.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\oauth.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\oauth1.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\oauth2.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\popup.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\shared.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\storage-type.enum.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\storage.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\ng2-ui-auth\utils.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\test.ts" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

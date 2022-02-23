@@ -1,0 +1,21 @@
+<div fxFlex fxLayout="column">
+
+  <div class="navigate-heading">
+    <div [ngStyle]="{'margin-top.px': 15}">
+      <button mat-mini-fab color="primary" aria-label="Dataset List" [routerLink]="listPath">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+    </div>
+    <h2>{{title}}</h2>
+  </div>
+  
+
+  <formly-form-flex-json [formlyGroup]="formlyGroup"
+                         [btn-ready]="btnReadyLabel"
+                         [btn-busy]="btnLoadingLabel"
+                         (onFormSubmit)="formSubmit()">
+  </formly-form-flex-json>
+
+
+
+</div>
