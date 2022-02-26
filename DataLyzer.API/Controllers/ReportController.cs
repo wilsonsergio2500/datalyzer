@@ -30,6 +30,13 @@ namespace DataLyzer.API.Controllers
             return Ok();
         }
 
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> Get(string Id) 
+        {
+            DataSetReport item = await reportRepository.Get(Id);
+            return Ok(item);
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {

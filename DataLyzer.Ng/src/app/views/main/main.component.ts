@@ -1,7 +1,7 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { Logout } from '../../states/auth/auth.actions';
+import { AuthLogout } from '../../states/auth/auth.actions';
 
 @Component({
   selector: 'main',
@@ -31,6 +31,6 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   logout() {
-    this.store.dispatch(new Logout())
+    this.store.dispatch(new AuthLogout())
   }
 }

@@ -3,7 +3,7 @@ import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } fro
 import { Store } from "@ngxs/store";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { LoginRedirect } from "@states/auth/auth.actions";
+import { AuthLoginRedirect } from "@states/auth/auth.actions";
 import { AuthState } from "@states/auth/auth.state";
 
 @Injectable()
@@ -17,7 +17,7 @@ export class AuthenticatedGuard implements CanActivate {
         if (!!payload) {
           return true;
         } else {
-          this.store.dispatch(new LoginRedirect());
+          this.store.dispatch(new AuthLoginRedirect());
           return false;
         }
 

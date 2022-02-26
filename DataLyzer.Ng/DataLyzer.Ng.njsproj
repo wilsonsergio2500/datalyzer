@@ -81,6 +81,8 @@
     <Folder Include="src\app\views\main\report\" />
     <Folder Include="src\app\views\main\report\add\" />
     <Folder Include="src\app\views\main\report\list\" />
+    <Folder Include="src\app\views\main\report\view\" />
+    <Folder Include="src\app\views\register\" />
     <Folder Include="src\assets\" />
     <Folder Include="src\assets\fonts\" />
     <Folder Include="src\environments\" />
@@ -140,6 +142,10 @@
     <Content Include="src\app\views\main\report\list\main-report-list.component.scss" />
     <Content Include="src\app\views\main\report\main-report.component.html" />
     <Content Include="src\app\views\main\report\main-report.component.scss" />
+    <Content Include="src\app\views\main\report\view\main-report-view.component.html" />
+    <Content Include="src\app\views\main\report\view\main-report-view.component.scss" />
+    <Content Include="src\app\views\register\register.component.html" />
+    <Content Include="src\app\views\register\register.component.scss" />
     <Content Include="src\assets\.gitkeep" />
     <Content Include="src\assets\fonts\spartan.otf" />
     <Content Include="src\favicon.ico" />
@@ -237,6 +243,10 @@
     <TypeScriptCompile Include="src\app\views\main\report\main-report.component.ts" />
     <TypeScriptCompile Include="src\app\views\main\report\main-report.module.ts" />
     <TypeScriptCompile Include="src\app\views\main\report\main-report.routing.module.ts" />
+    <TypeScriptCompile Include="src\app\views\main\report\view\main-report-view.component.ts" />
+    <TypeScriptCompile Include="src\app\views\main\report\view\main-report-view.resolver.ts" />
+    <TypeScriptCompile Include="src\app\views\register\register.component.ts" />
+    <TypeScriptCompile Include="src\app\views\register\register.form.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />

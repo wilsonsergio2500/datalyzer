@@ -12,6 +12,7 @@ import { MaterialComponentsModule } from '@material/material.module';
 import { ReactiveFormsTypedModule } from 'reactive-forms-typed';
 import { NgxFormlyFieldExtendedModule } from '@formlyExtended/ngx-formly-fields-extended.module';
 import { environment } from '../../../environments/environment';
+import { ChartModule } from 'angular-highcharts';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { environment } from '../../../environments/environment';
     FormsModule,
     ScrollingModule,
     ReactiveFormsTypedModule,
-    NgxFormlyFieldExtendedModule
+    NgxFormlyFieldExtendedModule,
+    ChartModule
   ],
   exports: [
     RouterModule,
@@ -38,7 +40,8 @@ import { environment } from '../../../environments/environment';
     CustomComponentsModule,
     ScrollingModule,
     ReactiveFormsTypedModule,
-    NgxFormlyFieldExtendedModule
+    NgxFormlyFieldExtendedModule,
+    ChartModule
   ]
 })
 export class SharedModule {

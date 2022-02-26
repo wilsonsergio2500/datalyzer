@@ -1,0 +1,57 @@
+@import "thememe";
+@import "variables";
+
+:host {
+  .register-frame {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    margin-top: -10vh;
+  }
+
+  .logo-header {
+    font-size: 30px;
+    padding: 20px;
+    color: $mat-color-primary;
+    display: flex;
+    justify-content: center;
+  }
+
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .mat-form-field {
+    padding: 5px;
+  }
+
+  .mat-card {
+    margin: 10px;
+  }
+
+  .register-error-container {
+    margin: 5px;
+
+    .register-error-container-card {
+        display:flex;
+      .register-error-container-list {
+          padding-left:10px;
+      }
+    }
+
+    .msg {
+      position: absolute;
+      top: 10px;
+      padding: 10px;
+      color: $mat-color-warn;
+    }
+  }
+}

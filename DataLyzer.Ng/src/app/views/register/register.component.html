@@ -1,0 +1,79 @@
+
+<div class="register-frame">
+
+  <mat-card fxLayout="column">
+
+    <div class="logo-font logo-header color-primary">
+      DataLyzer
+      <mat-icon>insert_chart</mat-icon>
+    </div>
+    <div class="flex-center">
+      <span class="subheading">Register to DataLyzer</span>
+    </div>
+
+    <div>
+
+      <form [formGroup]="form" fxFlex fxLayout="row wrap" (ngSubmit)="Submit()">
+
+        <mat-form-field fxFlex="100">
+          <input matInput type="text" placeholder="Email" formControlName="Username" autocomplete="off" autocapitalize="off">
+          <mat-error formControlOnErrorItem="Username"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100" fxFlex.gt-sm="50">
+          <input matInput type="Password" placeholder="Password" formControlName="Password" autocapitalize="off">
+          <mat-error formControlOnErrorItem="Password"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100" fxFlex.gt-sm="50">
+          <input matInput type="Password" placeholder="Confirm Password" formControlName="ConfirmPassword" autocapitalize="off">
+          <mat-error formControlOnErrorItem="ConfirmPassword"></mat-error>
+        </mat-form-field>
+
+        <div class="action-section" fxLayout="column" fxFlex="100">
+
+          <ng-container *ngIf="(errors$ | async) as errors">
+
+            <ng-container *ngIf="errors.length">
+              <div class="register-error-container">
+                <mat-card class="register-error-container-card">
+                  <mat-icon color="warn">error</mat-icon>
+                  <div class="register-error-container-list">
+                    <div *ngFor="let error of errors">- {{error.description}}</div>
+                  </div>
+                </mat-card>
+              </div>
+            </ng-container>
+
+          </ng-container>
+
+          <div class="flex-center">
+            Already have an Account?<a mat-button color="primary" routerLink="/login">Login</a>
+          </div>
+
+          <div fxFlex dir="rtl">
+            <loading-button [IsBusy]="working$ | async" type="submit" mat-raised-button [disabled]="form.invalid">
+              <loading-button-ready>
+                Register
+              </loading-button-ready>
+              <loading-button-busy>
+                Creating...
+              </loading-button-busy>
+            </loading-button>
+
+          </div>
+
+
+
+        </div>
+
+
+      </form>
+
+    </div>
+
+   
+
+  </mat-card>
+
+</div>

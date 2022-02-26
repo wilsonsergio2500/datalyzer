@@ -1,7 +1,8 @@
 export interface IReportStateModel {
-    working: boolean;
+  working: boolean;
   records: IDataSetReport[];
-  
+  current: IDataSetReport;
+  chartOptions: IChartMetaData;
 }
 
 export interface INewReport {
@@ -27,4 +28,20 @@ export interface IDataSetReport {
   categoryField: string;
   seriesField: string;
   valueField: string;
+}
+
+export interface IReportProcessPayloadRequest {
+  datasetId: number;
+  reportId: number;
+}
+
+export interface IChartProcessSeriesParams {
+  payload: any[],
+  reportDefinition: IDataSetReport,
+}
+
+export interface IChartMetaData {
+  categories: string[];
+  chartSeries: { name: string, data: number[] }[];
+  label: string;
 }

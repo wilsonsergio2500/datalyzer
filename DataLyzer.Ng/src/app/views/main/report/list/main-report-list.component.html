@@ -46,8 +46,8 @@
             <ng-container matColumnDef="action">
               <mat-header-cell *matHeaderCellDef></mat-header-cell>
               <mat-cell *matCellDef="let row" data-label="view">
-                <a mat-button color="primary" routerLink="./view/{{row['id']}}">Detail</a>
-                <button mat-button color="warn" (click)="onRemove(row['id'])">Remove</button>
+                <a mat-button color="primary" routerLink="./view/{{row['datasetId']}}/{{row['id']}}">Detail</a>
+                <button mat-button color="warn" (click)="onRemove(row.id)">Remove</button>
               </mat-cell>
             </ng-container>
 

@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {  Validators } from '@angular/forms';
 import { ILoginCredentials } from './login.form';
-import { AuthService } from '../../modules/ng2-ui-auth/auth.service';
 import { Store, Actions, ofActionErrored } from '@ngxs/store';
-import { Login } from '@states/auth/auth.actions';
+import { AuthLogin } from '@states/auth/auth.actions';
 import { NgTypeFormGroup, FormTypeBuilder } from 'reactive-forms-typed';
 
 @Component({
@@ -19,7 +18,6 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formTypeBuilder: FormTypeBuilder,
-    private authService: AuthService,
     private store: Store,
     private actions: Actions
   ) {
@@ -47,12 +45,8 @@ export class LoginComponent implements OnInit {
       }
     });
 
-    //const data = this.authService.getPayload();
-    //const auth = this.authService.isAuthenticated();
-    //console.log(data);
-    //console.log(auth);
 
-    this.actions.pipe(ofActionErrored(Login)).subscribe((x) => {
+    this.actions.pipe(ofActionErrored(AuthLogin)).subscribe((x) => {
       this.hasError = true;
       this.btnLoading = false;
       this.LoginForm.reset();
@@ -63,11 +57,7 @@ export class LoginComponent implements OnInit {
   Submit() {
     if (this.LoginForm.valid) {
       this.btnLoading = true;
-
-      this.store.dispatch(new Login(this.LoginForm.value));
-
-
-      
+      this.store.dispatch(new AuthLogin(this.LoginForm.value));
     }
   }
 }

@@ -27,6 +27,8 @@
     "@ngxs/devtools-plugin": "^3.7.3",
     "@ngxs/router-plugin": "^3.7.3",
     "@ngxs/store": "^3.7.3",
+    "angular-highcharts": "^11.2.2",
+    "highcharts": "^9.3.3",
     "reactive-forms-typed": "^11.0.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
