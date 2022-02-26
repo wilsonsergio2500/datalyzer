@@ -9,7 +9,6 @@ export class MainReportAddResolver implements Resolve<any>{
   constructor(private store: Store) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-
     const pageId = route.params.id;
     this.store.dispatch([new DataSetGetById(pageId), new DataSetGetPayload(pageId) ]);
     return;

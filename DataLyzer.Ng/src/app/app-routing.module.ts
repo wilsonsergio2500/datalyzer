@@ -4,12 +4,14 @@ import { AppComponent } from './app.component';
 import { AuthenticatedGuard } from './guards/authenticated.guard';
 import { getGuards } from './guards/guards';
 import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
 
 const routes: Routes = [
   <Route>{
     path: '', component: AppComponent,
     children: [
       <Route>{ path: 'login', component: LoginComponent },
+      <Route>{ path: 'register', component: RegisterComponent},
       <Route>{ path: 'main', loadChildren: () => import('./views/main/main.module').then(m => m.MainModule), canActivate: [AuthenticatedGuard] },
       <Route>{ path: '', loadChildren: () => import('./views/main/main.module').then(m => m.MainModule), canActivate: [AuthenticatedGuard] }
     ]

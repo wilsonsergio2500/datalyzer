@@ -1,0 +1,66 @@
+<div fxLayout="column" fxFlex>
+
+  <div fxLayout="column" fxLayoutAlign="start center" [ngStyle]="{'padding-top.px': 30}" *ngIf="working$ | async as loading; else done">
+    <mat-progress-spinner mode="indeterminate" [diameter]="30" [strokeWidth]="2"></mat-progress-spinner>
+    <span [ngStyle]="{'padding.px': 10}">Loading Report...</span>
+  </div>
+
+  <ng-template #done>
+
+    <ng-container *ngIf="current$ | async as dataset">
+
+      <div class="navigate-heading">
+        <div [ngStyle]="{'margin-top.px': 15}">
+          <button mat-mini-fab color="primary" aria-label="Dataset List" routerLink="/main/report">
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+        </div>
+        <h2>More Reports</h2>
+      </div>
+
+      <h1>{{dataset.name}}</h1>
+
+      <ng-current *ngIf="currentReport$ | async as reportDef">
+
+        <mat-card class="report-definition-card">
+          <div class="responsive-list">
+            <div class="responsive-list-item">
+              <div class="responsive-list-item-label">
+                Filter By Field
+              </div>
+              <div class="responsive-list-item-value">
+                {{reportDef.filterField}}
+              </div>
+            </div>
+            <div class="responsive-list-item">
+              <div class="responsive-list-item-label">
+                Filter Value
+              </div>
+              <div class="responsive-list-item-value">
+                {{reportDef.filterValue}}
+              </div>
+            </div>
+            <div class="responsive-list-item">
+              <div class="responsive-list-item-label">
+                Series Field
+              </div>
+              <div class="responsive-list-item-value">
+                {{reportDef.seriesField}}
+              </div>
+            </div>
+          </div>
+        </mat-card>
+
+      </ng-current>
+
+      <div>
+        <mat-card>
+          <div [chart]="chart"></div>
+        </mat-card>
+      </div>
+
+    </ng-container>
+
+  </ng-template>
+
+</div>
